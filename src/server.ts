@@ -45,10 +45,6 @@ setEnv("CHANNELS_CONFIG_PATH", "/usr/local/etc/mirakurun/channels.yml");
 setEnv("SERVICES_DB_PATH", "/usr/local/var/db/mirakurun/services.json");
 setEnv("PROGRAMS_DB_PATH", "/usr/local/var/db/mirakurun/programs.json");
 
-if (process.platform === "linux") {
-    execSync(`renice -n -10 -p ${ process.pid }`);
-    execSync(`ionice -c 1 -n 7 -p ${ process.pid }`);
-}
 
 _.config.server = config.loadServer();
 _.config.channels = config.loadChannels();
