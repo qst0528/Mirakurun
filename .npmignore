@@ -6,8 +6,6 @@
 .gitignore
 .travis.yml
 Dockerfile
-tsconfig.json
-tslint.json
 *.m2ts
 *.log
 *.swp
