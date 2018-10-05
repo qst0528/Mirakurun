@@ -45,7 +45,6 @@ setEnv("CHANNELS_CONFIG_PATH", "/usr/local/etc/mirakurun/channels.yml");
 setEnv("SERVICES_DB_PATH", "/usr/local/var/db/mirakurun/services.json");
 setEnv("PROGRAMS_DB_PATH", "/usr/local/var/db/mirakurun/programs.json");
 
-
 _.config.server = config.loadServer();
 _.config.channels = config.loadChannels();
 _.config.tuners = config.loadTuners();
