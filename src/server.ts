@@ -33,11 +33,11 @@ process.on("uncaughtException", err => {
     console.error(err.stack);
 });
 
-setEnv("SERVER_CONFIG_PATH", "/home/mirakurun/config/server.yml");
-setEnv("TUNERS_CONFIG_PATH", "/home/mirakurun/config/tuners.yml");
-setEnv("CHANNELS_CONFIG_PATH", "/home/mirakurun/config/channels.yml");
-setEnv("SERVICES_DB_PATH", "/home/mirakurun/db/services.json");
-setEnv("PROGRAMS_DB_PATH", "/home/mirakurun/db/programs.json");
+setEnv("SERVER_CONFIG_PATH", "/home/mirakurun/mirakurun/config/server.yml");
+setEnv("TUNERS_CONFIG_PATH", "/home/mirakurun/mirakurun/config/tuners.yml");
+setEnv("CHANNELS_CONFIG_PATH", "/home/mirakurun/mirakurun/config/channels.yml");
+setEnv("SERVICES_DB_PATH", "/home/mirakurun/mirakurun/db/services.json");
+setEnv("PROGRAMS_DB_PATH", "/home/mirakurun/mirakurun/db/programs.json");
 
 _.config.server = config.loadServer();
 _.config.channels = config.loadChannels();
