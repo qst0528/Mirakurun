@@ -13,12 +13,6 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 */
-if (process.platform !== "win32") {
-    if (process.getuid() !== 0) {
-        console.error("root please.");
-        process.exit(1);
-    }
-}
 
 import { execSync } from "child_process";
 import _ from "./Mirakurun/_";
@@ -39,11 +33,11 @@ process.on("uncaughtException", err => {
     console.error(err.stack);
 });
 
-setEnv("SERVER_CONFIG_PATH", "/usr/local/etc/mirakurun/server.yml");
-setEnv("TUNERS_CONFIG_PATH", "/usr/local/etc/mirakurun/tuners.yml");
-setEnv("CHANNELS_CONFIG_PATH", "/usr/local/etc/mirakurun/channels.yml");
-setEnv("SERVICES_DB_PATH", "/usr/local/var/db/mirakurun/services.json");
-setEnv("PROGRAMS_DB_PATH", "/usr/local/var/db/mirakurun/programs.json");
+setEnv("SERVER_CONFIG_PATH", "/home/mirakurun/config/server.yml");
+setEnv("TUNERS_CONFIG_PATH", "/home/mirakurun/config/tuners.yml");
+setEnv("CHANNELS_CONFIG_PATH", "/home/mirakurun/config/channels.yml");
+setEnv("SERVICES_DB_PATH", "/home/mirakurun/db/services.json");
+setEnv("PROGRAMS_DB_PATH", "/home/mirakurun/db/programs.json");
 
 
 _.config.server = config.loadServer();

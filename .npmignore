@@ -1,11 +1,15 @@
 /.vscode
 /node_modules
+/src
 /test
 .dockerignore
 .editorconfig
 .gitignore
 .travis.yml
 Dockerfile
+gulpfile.js
+tsconfig.json
+tslint.json
 *.m2ts
 *.log
 *.swp
