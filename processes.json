@@ -4,16 +4,16 @@
       "name": "mirakurun-server",
       "script": "lib/server.js",
       "node_args" : "--max_old_space_size=256",
-      "error_file": "log/mirakurun.stderr.log",
-      "out_file": "log/mirakurun.stdout.log",
+      "error_file": "/home/mirakurun/log/mirakurun.stderr.log",
+      "out_file": "/home/mirakurun/log/mirakurun.stdout.log",
       "merge_logs": true,
       "pid_file": "run/mirakurun.pid",
       "exec_mode": "fork",
       "autorestart": true,
       "env": {
         "NODE_ENV": "production",
-        "LOG_STDOUT": "log/mirakurun.stdout.log",
-        "LOG_STDERR": "log/mirakurun.stderr.log"
+        "LOG_STDOUT": "/home/mirakurun/log/mirakurun.stdout.log",
+        "LOG_STDERR": "/home/mirakurun/log/mirakurun.stderr.log"
       }
     }
   ]
