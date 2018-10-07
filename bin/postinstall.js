@@ -44,6 +44,7 @@ if (process.platform === "linux" || process.platform === "darwin") {
     const prefix = "/home/mirakurun/mirakurun";
     const configDir = path.join(prefix, "config");
     const dataDir = path.join(prefix, "db");
+    const runDir = path.join(prefix, "run");
     const logDir = path.join(prefix, "log");
 
     child_process.execSync(`mkdir -vp ${configDir}`);
