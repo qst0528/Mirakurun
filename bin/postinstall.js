@@ -41,13 +41,14 @@ if (process.platform === "linux" || process.platform === "darwin") {
         process.exit(0);
     }
 
-    const prefix = "/home/mirakurun";
+    const prefix = "/home/mirakurun/mirakurun";
     const configDir = path.join(prefix, "config");
     const dataDir = path.join(prefix, "db");
     const logDir = path.join(prefix, "log");
 
     child_process.execSync(`mkdir -vp ${configDir}`);
     child_process.execSync(`mkdir -vp ${dataDir}`);
+    child_process.execSync(`mkdir -vp ${runDir}`);
     child_process.execSync(`mkdir -vp ${logDir}`);
 
     const serverConfigPath = path.join(configDir, "server.yml");
